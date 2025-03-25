@@ -14,13 +14,14 @@ load_dotenv()
 
 EMAIL_ADDRESS = os.getenv('EMAIL_ADDRESS')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
-IMAP_SERVER = os.getenv('IMAP_SERVER')
-SMTP_SERVER = os.getenv('SMTP_SERVER')
-IMAP_PORT = os.getenv('IMAP_PORT')
-SMTP_PORT = os.getenv('SMTP_PORT')
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
-MODEL_NAME = os.getenv('MODEL_NAME')
 
+
+IMAP_SERVER = "imap.gmail.com"
+SMTP_SERVER = "smtp.gmail.com"
+IMAP_PORT = 993
+SMTP_PORT = 587
+MODEL_NAME = "llama-3.3-70b-versatile"
 
 app = FastAPI()
 
