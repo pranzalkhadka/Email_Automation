@@ -6,6 +6,7 @@ import email
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage
 
@@ -24,6 +25,14 @@ SMTP_PORT = 587
 MODEL_NAME = "llama-3.3-70b-versatile"
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 def fetch_unread_email():
