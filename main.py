@@ -74,7 +74,7 @@ def fetch_unread_email():
 
 def generate_response(email_body):
     chat = ChatGroq(groq_api_key=GROQ_API_KEY, model_name=MODEL_NAME)
-    response = chat.invoke([HumanMessage(content=f"Read the email and give a proper and respectful reply: {email_body}")])
+    response = chat.invoke([HumanMessage(content=f"Read the email and give a respectful reply: {email_body}")])
     return response.content
 
 
