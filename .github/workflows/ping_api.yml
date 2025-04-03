@@ -3,11 +3,16 @@ name: Ping API Every Minute
 on:
   schedule:
     - cron: '*/1 * * * *'  # Runs every minute
+  workflow_dispatch:
 
 jobs:
   ping-api:
     runs-on: ubuntu-latest
     steps:
-      - name: Make a request to the API
+      - name: Install curl
+        run: sudo apt-get install -y curl
+
+      - name: Make API request
         run: |
-          curl -X POST https://email-automator.fly.dev/process-email
+          curl -X POST "https://email-automator.fly.dev/process-email" \
+          -H "Content-Type: application/json"
