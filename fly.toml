@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for email-bot-97 on 2025-03-28T17:45:21+05:45
+# fly.toml app configuration file generated for email-automator on 2025-04-03T20:39:56+05:45
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'email-bot-97'
+app = 'email-automator'
 primary_region = 'atl'
 
 [build]
