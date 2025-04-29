@@ -15,3 +15,6 @@
    8. Open your browser and go to http://localhost:8000/docs to access the FastAPI UI.
    9. Locate the process email endpoint and execute it
 ```
+
+
+# link = https://email-automation-app.fly.dev/
